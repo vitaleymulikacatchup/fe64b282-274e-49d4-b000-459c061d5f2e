@@ -1,7 +1,7 @@
 "use client";
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
 import NavbarLayoutFloatingOverlay from '@/components/navigation/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
-import PlayfulHero from '@/components/sections/layouts/hero/BillboardHero';
+import PlayfulHero from '@/components/sections/layouts/hero/PlayfulHero';
 import BaseAbout from '@/components/sections/layouts/about/BaseAbout';
 import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
 import TextGridTokenomics from '@/components/sections/layouts/tokenomics/TextGridTokenomics';
