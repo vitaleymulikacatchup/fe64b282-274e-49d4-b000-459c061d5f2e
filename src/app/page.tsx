@@ -5,7 +5,7 @@ import PlayfulHero from '@/components/sections/layouts/hero/BillboardHero';
 import BaseAbout from '@/components/sections/layouts/about/BaseAbout';
 import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
 import TextGridTokenomics from '@/components/sections/layouts/tokenomics/TextGridTokenomics';
-import LogoFooter from '@/components/sections/layouts/footer/LogoFooter';
+import FooterLogo from '@/components/sections/layouts/footer/LogoFooter';
 
 export default function Home() {
   return (
@@ -58,7 +58,7 @@ export default function Home() {
         />
       </div>
       <div id="footer" data-section="footer">
-        <LogoFooter
+        <FooterLogo
           logoSrc="https://example.com/logo.png"
           logoAlt="MemePulse Logo"
           logoText="MemePulse"
