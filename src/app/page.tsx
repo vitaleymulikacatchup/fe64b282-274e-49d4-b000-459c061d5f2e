@@ -59,6 +59,9 @@ export default function Home() {
       </div>
       <div id="footer" data-section="footer">
         <LogoFooter
+          logoSrc="https://example.com/logo.png"
+          logoAlt="MemePulse Logo"
+          logoText="MemePulse"
           columns={[
             {
               title: 'Company',
