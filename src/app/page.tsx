@@ -10,7 +10,7 @@ import LogoFooter from '@/components/sections/layouts/footer/LogoFooter';
 export default function Home() {
   return (
     <SiteThemeProvider 
-      theme={{ styleVariant: 'funAndTrendy', colorTemplate: 1, textAnimation: 'slide'}}
+      theme={{ styleVariant: 'funAndTrendy', colorTemplate: 1, textAnimation: 'slide' }}
     >
       <div id="nav" data-section="nav">
         <NavbarLayoutFloatingOverlay
