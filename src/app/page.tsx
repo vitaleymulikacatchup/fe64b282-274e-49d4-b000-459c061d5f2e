@@ -5,7 +5,7 @@ import PlayfulHero from '@/components/sections/layouts/hero/BillboardHero';
 import BaseAbout from '@/components/sections/layouts/about/BaseAbout';
 import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
 import TextGridTokenomics from '@/components/sections/layouts/tokenomics/TextGridTokenomics';
-import FooterLogo from '@/components/sections/layouts/footer/LogoFooter';
+import LogoFooter from '@/components/sections/layouts/footer/LogoFooter';
 
 export default function Home() {
   return (
@@ -58,8 +58,8 @@ export default function Home() {
         />
       </div>
       <div id="footer" data-section="footer">
-        <FooterLogo
-          logoSrc="https://example.com/logo.png"
+        <LogoFooter
+          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/theme-funandtrendy-section-nav-slot-cont-1758884013331-a58c7bb5.jpg"
           logoAlt="MemePulse Logo"
           logoText="MemePulse"
           columns={[
