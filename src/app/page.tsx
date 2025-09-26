@@ -1,93 +1,72 @@
 "use client";
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
-import NavbarLayoutFloatingOverlay from '@/components/navigation/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
-import PlayfulHero from '@/components/sections/layouts/hero/PlayfulHero';
+import NavbarStyleApple from '@/components/navigation/NavbarStyleApple/NavbarStyleApple';
+import VoidHero from '@/components/sections/layouts/hero/VoidHero';
 import BaseAbout from '@/components/sections/layouts/about/BaseAbout';
 import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
-import TextGridTokenomics from '@/components/sections/layouts/tokenomics/TextGridTokenomics';
-import LogoFooter from '@/components/sections/layouts/footer/LogoFooter';
+import PatternTokenomics from '@/components/sections/layouts/tokenomics/PatternTokenomics';
+import GradientFooter from '@/components/sections/layouts/footer/GradientFooter';
+
+export const dynamic = 'force-dynamic';
 
 export default function Home() {
   return (
-    <SiteThemeProvider 
-      theme={{ styleVariant: 'funAndTrendy', colorTemplate: 1, textAnimation: 'slide' }}
-    >
+    <SiteThemeProvider theme={{
+      styleVariant: "funAndTrendy",
+      colorTemplate: 1,
+      textAnimation: "slide"
+    }}>
       <div id="nav" data-section="nav">
-        <NavbarLayoutFloatingOverlay
-          navItems={
-            [
-              { name: 'Hero', id: 'hero' },
-              { name: 'About', id: 'about' },
-              { name: 'How To Buy', id: 'how-to-buy' },
-              { name: 'Tokenomics', id: 'tokenomics' },
-              { name: 'Footer', id: 'footer' }
-            ]
-          }
-          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/theme-funandtrendy-section-nav-slot-cont-1758884013331-a58c7bb5.jpg"
-          logoWidth={120}
-          logoHeight={40}
-          buttonText="Buy MemePulse"
-          onButtonClick={() => console.log('CTA clicked')}
+        <NavbarStyleApple
+          brandName="MemePulse"
+          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/design-a-simple-high-contrast-logotype-w-1758885637835-540af468.jpg"
+          logoAlt="MemePulse Logo"
+          navItems={[
+            { name: "Hero", id: "hero" },
+            { name: "About", id: "about" },
+            { name: "How to Buy", id: "how-to-buy" },
+            { name: "Tokenomics", id: "tokenomics" },
+            { name: "Footer", id: "footer" }
+          ]}
         />
       </div>
       <div id="hero" data-section="hero">
-        <PlayfulHero title="Welcome to MemePulse" subtitle="A playful memecoin experience at your fingertips!" />
+        <VoidHero
+          title="Welcome to MemePulse"
+          description="Join the fun with our engaging memecoin!"
+          tagLabel="Mint Here"
+          primaryButtonText="Buy Now"
+          secondaryButtonText="Explore"
+        />
       </div>
       <div id="about" data-section="about">
-        <BaseAbout 
+        <BaseAbout
           title="About MemePulse"
-          descriptions={[
-            "MemePulse is the next gen memecoin that brings fun to the cryptocurrency world.",
-            "Join our vibrant community and let’s create something amazing together!",
-            "With your participation, we aim to keep the fun going!"
-          ]}
+          descriptions={["MemePulse is your gateway to playful cryptocurrency interactions!", "Join a vibrant community and start your journey with our simple buying guide."]}
         />
       </div>
       <div id="how-to-buy" data-section="how-to-buy">
-        <HowToBuy2D variant="simple" />
+        <HowToBuy2D
+          variant="simple"
+        />
       </div>
       <div id="tokenomics" data-section="tokenomics">
-        <TextGridTokenomics
-          title="Tokenomics"
-          description="Our tokenomics are designed to ensure sustainability and growth."
-          tokenData={[
-            { value: "100M", description: "Total Supply" },
-            { value: "70M", description: "Circulating Supply" },
-            { value: "30M", description: "Reserved for Development" },
-          ]}
+        <PatternTokenomics
+          title="Tokenomics Overview"
+          description="Discover the fundamentals behind MemePulse token distribution and utility."
+          items={[{ value: "1M", description: "Total Supply" }, { value: "20%", description: "Initial Liquidity" }]}
         />
       </div>
       <div id="footer" data-section="footer">
-        <LogoFooter
-          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/theme-funandtrendy-section-nav-slot-cont-1758884013331-a58c7bb5.jpg"
+        <GradientFooter
+          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/design-a-simple-high-contrast-logotype-w-1758885637835-540af468.jpg"
           logoAlt="MemePulse Logo"
-          logoText="MemePulse"
+          copyrightText="© 2023 MemePulse"
           columns={[
-            {
-              title: 'Company',
-              items: [
-                { label: 'About Us', onClick: () => console.log('About Clicked') },
-                { label: 'Contact', onClick: () => console.log('Contact Clicked') },
-                { label: 'Privacy Policy', onClick: () => console.log('Privacy Policy Clicked') }
-              ]
-            },
-            {
-              title: 'Resources',
-              items: [
-                { label: 'Blog', onClick: () => console.log('Blog Clicked') },
-                { label: 'Documentation', onClick: () => console.log('Documentation Clicked') }
-              ]
-            },
-            {
-              title: 'Community',
-              items: [
-                { label: 'Discord', onClick: () => console.log('Discord Clicked') },
-                { label: 'Twitter', onClick: () => console.log('Twitter Clicked') }
-              ]
-            },
+            { title: "Links", items: [{ label: "Home", onClick: () => {} }, { label: "Buy now", onClick: () => {} }] },
+            { title: "Community", items: [{ label: "Telegram", onClick: () => {} }, { label: "Discord", onClick: () => {} }] },
+            { title: "More", items: [{ label: "Tokenomics", onClick: () => {} }, { label: "FAQs", onClick: () => {} }] }
           ]}
-          copyrightText="© 2023 MemePulse. All rights reserved."
-          onPrivacyClick={() => console.log('Privacy Policy Clicked')}
         />
       </div>
     </SiteThemeProvider>
