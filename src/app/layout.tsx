@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     images: ["https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/tmp/design-a-simple-high-contrast-logotype-w-1758885637835-540af468.jpg"]
   },
   robots: { index: true, follow: true },
-  icons: { icon: "/favicon.ico" }
+  icons: { url: "/favicon.ico" }
 };
 
 export default function RootLayout({
